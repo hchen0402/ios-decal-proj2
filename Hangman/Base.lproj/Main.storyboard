@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-nt-71c">
+                                <rect key="frame" x="475" y="100" width="82" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="CeC-8j-34T"/>
+                                    <constraint firstAttribute="height" constant="25" id="qWj-Fw-LZf"/>
+                                    <constraint firstAttribute="width" constant="82" id="teN-U9-CZ8"/>
+                                </constraints>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="start" destination="BYZ-38-t0r" eventType="touchUpInside" id="uPt-fA-bt1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWV-I9-pDa">
+                                <rect key="frame" x="180" y="20" width="240" height="235"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="ZiZ-6C-N6F"/>
+                                    <constraint firstAttribute="width" constant="240" id="iAR-Bb-MmN"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCJ-YP-8GQ">
+                                <rect key="frame" x="216" y="270" width="169" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="Cet-zj-xrC"/>
+                                    <constraint firstAttribute="height" constant="30" id="ks9-Hh-8XF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3y-om-fbg">
+                                <rect key="frame" x="266" y="308" width="68" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="8J4-h0-P23"/>
+                                </constraints>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guess" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iys-F6-fQZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect Guesses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xl-wz-Eu7">
+                                <rect key="frame" x="225" y="375" width="150" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5nu-Ff-IkU"/>
+                                    <constraint firstAttribute="width" constant="150" id="H9P-el-ByC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-yR-1yG">
+                                <rect key="frame" x="214" y="404" width="172" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1pj-YC-mnZ"/>
+                                    <constraint firstAttribute="width" constant="172" id="ihK-ZR-GKt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wif-ol-PMH">
+                                <rect key="frame" x="170" y="346" width="260" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6nE-PQ-CXM"/>
+                                    <constraint firstAttribute="width" constant="260" id="bNI-ny-LwJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wif-ol-PMH" firstAttribute="centerX" secondItem="D3y-om-fbg" secondAttribute="centerX" id="1fA-zg-AaN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KDa-nt-71c" secondAttribute="trailing" constant="23" id="4pD-zC-t7n"/>
+                            <constraint firstItem="D3y-om-fbg" firstAttribute="centerX" secondItem="qCJ-YP-8GQ" secondAttribute="centerX" id="GEu-UK-IIT"/>
+                            <constraint firstItem="Wif-ol-PMH" firstAttribute="centerX" secondItem="7Xl-wz-Eu7" secondAttribute="centerX" id="Hxo-ZN-DHx"/>
+                            <constraint firstItem="AWV-I9-pDa" firstAttribute="centerX" secondItem="qCJ-YP-8GQ" secondAttribute="centerX" id="Le8-z9-AEF"/>
+                            <constraint firstItem="AWV-I9-pDa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mug-s3-VgS"/>
+                            <constraint firstItem="pRD-yR-1yG" firstAttribute="top" secondItem="7Xl-wz-Eu7" secondAttribute="bottom" constant="8" symbolic="YES" id="N8k-Es-YeK"/>
+                            <constraint firstItem="Wif-ol-PMH" firstAttribute="top" secondItem="D3y-om-fbg" secondAttribute="bottom" constant="8" symbolic="YES" id="Oni-xy-3px"/>
+                            <constraint firstItem="7Xl-wz-Eu7" firstAttribute="top" secondItem="Wif-ol-PMH" secondAttribute="bottom" constant="8" symbolic="YES" id="Rg5-C8-JWg"/>
+                            <constraint firstItem="qCJ-YP-8GQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bQe-1k-M0I"/>
+                            <constraint firstItem="pRD-yR-1yG" firstAttribute="centerX" secondItem="7Xl-wz-Eu7" secondAttribute="centerX" id="iKM-ym-NJg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KDa-nt-71c" secondAttribute="bottom" constant="475" id="k7B-a8-kYk"/>
+                            <constraint firstItem="qCJ-YP-8GQ" firstAttribute="top" secondItem="AWV-I9-pDa" secondAttribute="bottom" constant="15" id="wqs-6m-4o3"/>
+                            <constraint firstItem="D3y-om-fbg" firstAttribute="top" secondItem="qCJ-YP-8GQ" secondAttribute="bottom" constant="8" symbolic="YES" id="yo1-3J-aoB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="IncorrectGuessed" destination="pRD-yR-1yG" id="V4J-t0-Xsv"/>
+                        <outlet property="guessButton" destination="D3y-om-fbg" id="xgZ-Ka-KxE"/>
+                        <outlet property="guessTextField" destination="qCJ-YP-8GQ" id="mbK-vL-qZR"/>
+                        <outlet property="guessed" destination="Wif-ol-PMH" id="ubK-Yz-KNg"/>
+                        <outlet property="image" destination="AWV-I9-pDa" id="LfL-sK-kKi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="389"/>
+        </scene>
+    </scenes>
+</document>
