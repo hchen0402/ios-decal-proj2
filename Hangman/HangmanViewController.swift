@@ -21,6 +21,7 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var IncorrectGuessed: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var knownString: UILabel!
+    var wrongGuess = ""
 
     
     override func viewDidLoad() {
@@ -61,6 +62,10 @@ class HangmanViewController: UIViewController {
             currentPic += 1
             image.image = UIImage(named: "hangman\(currentPic).gif")
             countWrong++;
+            if (!wrongGuess.containsString(Array(arrayLiteral: guessTextField.text!.uppercaseString)[0])) {
+                wrongGuess += Array(arrayLiteral: guessTextField.text!.uppercaseString)[0]
+            }
+            IncorrectGuessed.text = wrongGuess
         }
 
         self.view.endEditing(true)
